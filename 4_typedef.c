@@ -44,3 +44,5 @@ int main()
     printf("%lu\n", sizeof(arr));
     printf("%lu\n", sizeof(arr2));
 }
+
+// https://github.com/yoondev-classroom/220117_c
