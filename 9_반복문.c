@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 // 1. while
+//  => break: 반복문을 빠져나가는 키워드
+//     continue: 다음 조건으로 반복문을 수행하는 키워드
+
 #if 0
 while (조건식) {
   
@@ -24,6 +27,7 @@ int main()
     }
 #endif
 
+#if 0
     int i = 0;
     while (i < 100) {
         // printf("%d\n", ++i);
@@ -32,6 +36,19 @@ int main()
         if (i % 2 == 1) {
             printf("%d\n", i);
         }
+    }
+#endif
+
+    // break, continue;
+    int i = 0;
+    while (i < 10) {
+        i++;
+        if (i == 5) {
+            // break;
+            continue;
+        }
+
+        printf("%d\n", i);
     }
 
     return 0;
