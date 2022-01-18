@@ -57,3 +57,10 @@ int main()
 
     print();
 }
+
+// 0123456
+// abcdefg
+// Il10O
+//  => Windows
+//    : Consolas
+//      Cascadia Mono
