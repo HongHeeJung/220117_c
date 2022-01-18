@@ -20,7 +20,7 @@ int main()
     }
 #endif
 
-#if 0    
+#if 1
     while (1) {
         scanf("%d", &n);
 
