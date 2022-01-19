@@ -14,16 +14,33 @@ int x[3][5] = {
 //  : 5개짜리 배열을 가르키는 포인터입니다.
 // 4) int (*foo())[5]
 //  :  int 배열의 원소타입은입니다.
-int (*foo())[5]
+
+typedef int (*PARR)[5];
+// PARR = int(*)[5]
+
+// int (*foo())[5]
+PARR foo()
 {
     return x; // int (*p)[5] ---> int[5]
 }
 
 int add(int a, int b) { return a + b; }
 
-int (*goo())(int, int)
+typedef int (*FP1)(int, int);
+
+// int (*goo())(int, int)
+FP1 goo()
 {
-    return &add; //  int(*p)(int, int) ----> int(int, int)
+    return &add; //  int(*p)(int, int) ----> int add(int a, int b)
+}
+
+typedef FP1* FPP1;
+
+// int (*(*hoo())(void))(int, int)
+// FP1* hoo()
+FPP1 hoo()
+{
+    return &goo; //  int (*(*p)(void))(int, int) ---> int (*goo(void))(int, int)
 }
 
 // int (*goo())(int, int)
