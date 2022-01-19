@@ -28,4 +28,12 @@ int sub(int a, int b) { return a - b; }
 
 int main()
 {
+    int (*p)(int, int) = &add;
+
+    p = &sub;
+
+    printf("%d\n", (*p)(10, 20));
+    // p는 add 함수를 가르킵니다.
+    // 함수 포인터를 통해서 함수를 참조하면,
+    // 함수 포인터를 통해서 함수를 호출할 수 있습니다.
 }
