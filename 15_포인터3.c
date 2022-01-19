@@ -27,4 +27,6 @@ int main()
     printf("%p\n", pnum); // 0x16d97b1f8
 
     printf("%d\n", *pnum); // 200
+
+    return 0;
 }
