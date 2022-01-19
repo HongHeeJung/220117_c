@@ -29,6 +29,12 @@ int arr[100000];
 //  같은 파일에서만 접근이 가능한가?
 // => internal linkage
 static int global = 0;
+static void foo() { }
+// 다른 파일에서 호출이 불가능합니다.
+// > 정보 은닉
+
+// * 헤더 파일에는 절대 외부 연결(external linkage)를 두면
+//   안됩니다.
 
 /*
 Undefined symbols for architecture arm64:

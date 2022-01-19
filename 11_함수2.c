@@ -6,6 +6,10 @@ int add(int a, int b) { return a + b; }
 
 // 선언과 정의를 분리하는 방법. - 2
 int sub(int a, int b);
+int sub2(int, int);
+
+void foo(int age);
+void goo(int);
 
 int main()
 {

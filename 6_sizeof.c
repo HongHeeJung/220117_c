@@ -10,4 +10,7 @@ int main()
     // unsigned long: sizeof
     printf("%lu\n", sizeof(int)); // 4
     printf("%lu\n", sizeof(num)); // 4
+
+    // printf("%lu\n", sizeof int); // error!
+    printf("%lu\n", sizeof num); // 4
 }

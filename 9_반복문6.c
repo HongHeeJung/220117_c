@@ -44,7 +44,7 @@ int main()
     //     ++count;
     // }
 
-    for (count = 0; count < 10; ++count) {
+    for (int count = 0; count < 10; ++count) {
         printf("%d\n", count);
 
         if (count == 5)

@@ -13,6 +13,11 @@ while (조건식) {
 
 int main()
 {
+#if 0
+    for (; 1;) {
+    }
+#endif
+
     // 무한 루프 입니다.
     // while (1) {
     //     printf("hello\n");

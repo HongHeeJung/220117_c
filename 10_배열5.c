@@ -18,6 +18,6 @@ int main()
     printf("%p\n", arr);
     printf("%p\n", &arr[0]);
 
-    printf("%lu\n", sizeof(arr));
-    printf("%lu\n", sizeof(&arr[0]));
+    printf("%lu\n", sizeof(arr)); // int[5]
+    printf("%lu\n", sizeof(&arr[0])); // int*
 }
