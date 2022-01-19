@@ -20,7 +20,6 @@ FP goo(FP arg)
 
 int (*foo(int (*p)(int, int)))(int a, int b)
 {
-
     return &add; // 함수 포인터를 반환합니다.
 }
 
@@ -37,3 +36,9 @@ int main()
     // 함수의 이름은 함수 포인터의 암묵적 변환을 허용합니다.
     // 함수포인터에 대한 호출을 참조 없이 호출 가능합니다.
 }
+
+//         [ int ][ int ][ int ]
+//         |
+// [int*][int*]
+//   |
+//  [ int ][ int ][ int ]
