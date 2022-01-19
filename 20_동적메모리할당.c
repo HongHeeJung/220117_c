@@ -31,9 +31,18 @@ int main()
 {
     // 성적 관리 프로그램을 만듭니다.
     // => 학생 수에 따라서 점수를 기록할 배열을 만들어야 합니다.
-    // int n = 0;
-    // printf("학생 수 > ");
-    // scanf("%d", &n);
+    int n = 0;
+    printf("학생 수 > ");
+    scanf("%d", &n);
+
+    // n = 1   => 4byte
+    // n => 10 => 40byte
+    int* score = (int*)malloc(sizeof(int) * n);
+    // 메모리 할당에 실패하면, NULL을 반환합니다.
+    if (score == NULL) {
+        printf("메모리 할당에 실패하였습니다.");
+        return 1;
+    }
 
     // int score[n];
     // => 위의 코드는 동작하지 않는 컴파일러가 있습니다.
