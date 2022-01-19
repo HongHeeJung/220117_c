@@ -27,6 +27,7 @@ int main()
     int n = 0x12345678;
 
     char* p = (char*)&n;
+    // 의도: "메모리를 해석하는 방법"을 변경하겠다.
 
     // printf("%x %x %x %x\n", *p, *(p + 1))
     printf("%x %x %x %x\n", p[0], p[1], p[2], p[3]);
