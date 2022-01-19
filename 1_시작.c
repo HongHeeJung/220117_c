@@ -1,12 +1,16 @@
 // 1_시작.c
 #include <stdio.h>
+
+#if 0
+#endif
+
 // 전처리기(preprocessor)
 // : 컴파일 이전에 수행됩니다.
 
 //   Compile           Linking
 // 1.c -> 1.obj
-// 2.c -> 2.obj => a.obj + b.obj + c.obj => a.exe
-// 3.c -> 3.obj
+// 2.c -> 2.obj => a.obj + b.obj + c.obj => a.exe(PE 포맷)
+// 3.c -> 3.obj                          => a.out(ELF 포맷)
 
 //================ VM 기반 언어
 //  : Java, C#, Kotlin, Go ...
@@ -16,8 +20,8 @@
 
 // 1. 컴파일러
 //  - Microsoft C/C++ Compiler: cl.exe
-//  - GNU Compiler: gcc
-//  - LLVM Compiler: clang
+//  - GNU Compiler: gcc: cc / g++
+//  - LLVM Compiler: clang: cc(clang) / g++(clang++)
 //   : Lightweight Virtual Machine
 //   1.c  => 중간언어 => 1.obj
 
@@ -59,6 +63,12 @@
 // 1. Line: - //
 // 2. Block - /* */
 //  => 중첩이 안됩니다.
+#if 0
+/*
+/*
+*/
+*/
+#endif
 
 #if 0
 #if 0
