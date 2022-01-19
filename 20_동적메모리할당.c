@@ -51,5 +51,11 @@ int main()
 
     printf("%d\n", p3[9999]);
 
+    // 동적 메모리 할당을 통해 할당된 메모리는
+    // 반드시 반납해야 합니다.
+    free(p1);
+    free(p2);
+    free(p3);
+
     return 0;
 }
