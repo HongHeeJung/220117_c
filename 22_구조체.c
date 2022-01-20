@@ -48,10 +48,10 @@ struct Complex {
 struct Complex add(struct Complex c1, struct Complex c2)
 {
     // return c1 + c2;
-    struct Complex result;
+    struct Complex result = { c1.real + c2.real, c1.imagin + c2.imagin };
 
-    result.real = c1.real + c2.real;
-    result.imagin = c1.imagin + c2.imagin;
+    // result.real = c1.real + c2.real;
+    // result.imagin = c1.imagin + c2.imagin;
 
     return result;
 }
