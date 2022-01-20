@@ -48,7 +48,10 @@ struct Complex {
 struct Complex add(struct Complex c1, struct Complex c2)
 {
     // return c1 + c2;
-    struct Complex result = { c1.real + c2.real, c1.imagin + c2.imagin };
+    struct Complex result = {
+        .real = c1.real + c2.real,
+        .imagin = c1.imagin + c2.imagin
+    };
 
     // result.real = c1.real + c2.real;
     // result.imagin = c1.imagin + c2.imagin;
@@ -58,8 +61,12 @@ struct Complex add(struct Complex c1, struct Complex c2)
 
 int main()
 {
-    struct Complex a = { 1, 1 }; // 1 + 1i
-    struct Complex b = { 2, 2 }; // 2 + 2i
+    // struct Complex a = { 1, 1 }; // 1 + 1i
+    // struct Complex b = { 2, 2 }; // 2 + 2i
+
+    // 멤버 초기화 기능이 제공됩니다. - C99
+    struct Complex a = { .real = 1, .imagin = 1 };
+    struct Complex b = { .real = 2, .imagin = 2 };
 
     struct Complex s = add(a, b);
 
