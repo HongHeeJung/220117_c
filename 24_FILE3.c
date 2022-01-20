@@ -31,6 +31,12 @@ int main()
         return 1;
     }
 
+    FILE* out = fopen("out.c", "w");
+    if (out == NULL) {
+        perror("fopen");
+        return 1;
+    }
+
     char buf[64] = {
         0,
     }; // 전체를 0으로 초기화
@@ -38,7 +44,10 @@ int main()
         char* s = fgets(buf, sizeof buf, fp);
         if (s == NULL)
             break;
-        printf("%s", buf);
+        // printf("%s", buf);
+        // fputs(buf, stdout);
+
+        fputs(buf, out);
     }
 
 #if 0
@@ -52,6 +61,8 @@ int main()
     }
 #endif
 
+    fclose(out);
     fclose(fp);
+
     return 0;
 }
