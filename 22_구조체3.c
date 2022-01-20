@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// C언어에서는 구조체를 typedef를 통해 사용하는 경우가
+// 많습니다.
+#if 0
 struct Complex {
     double real;
     double imagin;
 };
-
-// C언어에서는 구조체를 typedef를 통해 사용하는 경우가
-// 많습니다.
 typedef struct Complex COMPLEX;
+#endif
+
+typedef struct Complex {
+    double real;
+    double imagin;
+} COMPLEX;
 
 COMPLEX* add1(const COMPLEX* c1, const COMPLEX* c2)
 {
