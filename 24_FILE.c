@@ -13,6 +13,13 @@
 
 int main()
 {
+    int* p = (int*)malloc(sizeof(int));
+    if (p == NULL) {
+        // printf("error!\n");
+        fprintf(stderr, "error...\n");
+        exit(1);
+    }
+
     // printf("hello\n");
     fprintf(stderr, "hello");
 
