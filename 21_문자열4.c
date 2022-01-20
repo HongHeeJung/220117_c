@@ -10,15 +10,42 @@
 //  dest의 뒤에 src가 이어집니다.
 //  주의사항: 충분한 메모리가 확보되어 있어야 합니다.
 
+char* xstrcpy(char* dst, const char* src)
+{
+    char* p = dst;
+
+#if 0
+    while (*src) {
+        *p = *src;
+        p++;
+        src++;
+    }
+#endif
+#if 0
+    while (*src) {
+        *p++ = *src++;
+    }
+#endif
+    while ((*p++ = *src++) != '\0')
+        /* Nothing */;
+
+    *p = '\0';
+
+    return dst;
+}
+
 int main()
 {
+    int a;
+    printf("%d\n", a = 3);
+
     const char* s1 = "hello";
     char str[32] = "hello";
     // 문자열 리터럴을 통해 문자열 배열을 초기화할 수 있습니다.
 
     // str = "show me the money";
     // 대입을 통해 문자열 내용을 변경하는 것이 불가능합니다.
-    strcpy(str, "show me the money");
+    xstrcpy(str, "show me the money");
 
     strcat(str, " hello");
 
